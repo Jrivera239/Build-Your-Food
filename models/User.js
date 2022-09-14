@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 
+//This class, Comment, and Post classes will convey what the data consists of
 class User extends Model {}
 User.init(
   {
@@ -20,6 +21,7 @@ User.init(
         isEmail: true,
       },
     },
+    //password length must be at least 6 char
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,6 +31,7 @@ User.init(
     },
   },
   {
+    //hashes password before creating and updating it
     hooks: {
       async beforeCreate(userData) {
         userData.password = await bcrypt.hash(userData);

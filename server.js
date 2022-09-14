@@ -10,6 +10,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//Allows us to use handlebars
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
