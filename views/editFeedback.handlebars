@@ -5,8 +5,7 @@
     <div class="col-8">
       <div class="card mt-6">
         <div class="card-body">
-          <h4 class="card-title text-center">{{example}}</h4>
-            <ul id="" class=""></ul>
+          <h4 class="card-title text-center">{{format_date example.createdAt}}</h4>
               <ul id="detail-example-list" 
                 class="list-group">
                <li data-id="{{example.id}}" 
@@ -17,13 +16,13 @@
                    <alert>How would you describe the food's taste?</alert>
                    <p contenteditable="true" 
                    id= "editTaste">  {{example.taste}} </p>
-                   <alert>What would you rate it fro the scale from 1-10 "1 being yucky, 10 being the yummiest"?</alert>
+                   <alert>What would you rate it from the scale from 1-10 "1 being yucky, 10 being the yummiest"?</alert>
                    <p contenteditable="true" 
                    id= "editScale">  {{example.scale}} </p>
                     <alert>Would you recommend this Restaurant?</alert>
                    <p contenteditable="true" 
                    id= "editRecommend">  {{example.recommend}} </p>
-                     <alert>Will you consider on coming back?</alert>
+                     <alert>Will you consider coming back?</alert>
                    <p contenteditable="true" 
                    id= "edit">  {{example.recommend}} </p>
                    <br>
