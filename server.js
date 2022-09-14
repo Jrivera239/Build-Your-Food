@@ -1,5 +1,5 @@
-const db = require('./config/connection');
 const express = require("express");
+const sequelize = require("./config/connection");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -9,10 +9,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Start server after DB connection
-db.connect(err => {
-  if (err) throw err;
-  console.log('Database connected.');
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log("Now listening"));
 });
