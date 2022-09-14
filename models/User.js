@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 //This class, Comment, and Post classes will convey what the data consists of
 class User extends Model {}
