@@ -1,11 +1,5 @@
-<div id="main-container" 
-    class="container">
-    <div>
-    <div class="jumbotron jumbotron-fluid hero">
-      <p class="display-6 text-black d-none d-sm-block text-center">
-        Welcome to Rate The Food </p>
-      <hr class="my-4">
-      <div class="col">
+<!DOCTYPE html>
+<html lang="en">
 
         {{#if isloggedin}}
         
@@ -16,28 +10,14 @@
             Upon creating account, you will be able to keep your feedback on record.
             </footer>
 
-        {{else}}
-          <p class="display-5 text-black text-center">
-            Let's begin with your Food Adventure.
+    <body>
 
-            <br>
+	{{{ body }}}
 
-            Ready to start? -> 
-            <a class="signup" href="/register" data-register={{register}}
-            >Create Account</a> to begin your Food Adveture
-            </p>
+  <script src="[tbd] ">
+  </script>
+</body>
+</html>
 
-        {{/if}}
 
-        <h5 id="if-login-err" class="text-center"></h5>
-      </div>
-    </div>
-  </div>
-
-   <div class="row likefood">
-        <div class="col">
-        <h1 class="strong lead text-black text-center">
-            Because who doesn't like food right?</h1>
-        </div>
-    </div>    
 
