@@ -16,7 +16,7 @@ body {
     background: rgba(5, 2, 2, 0.265);
 }
 
-.hero{
+.hero {
     margin: 2.5rem .5rem 0 .5rem;
     padding: 1.5rem;
 }
@@ -31,7 +31,15 @@ body {
     width: 100vw;
 }
 
-
+nav {
+    align-items:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+     padding-left:15%;
+    padding-right:15%;
+    padding-top:20px;
+}
 
 
 
