@@ -3,7 +3,12 @@ const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
 //This class, Comment, and Post classes will convey what the data consists of
-class User extends Model {}
+class User extends Model {
+  //compares password they typed into to password associated with their account.
+  verifyPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 User.init(
   {
     id: {
