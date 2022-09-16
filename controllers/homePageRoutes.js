@@ -24,6 +24,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/registration", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
   res.render("registration");
 });
 
