@@ -23,4 +23,8 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/registration", (req, res) => {
+  res.render("registration");
+});
+
 module.exports = router;
