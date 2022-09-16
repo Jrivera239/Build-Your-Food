@@ -9,22 +9,13 @@
       <hr class="my-4">
       <div class="col">
 
-        {{#if isloggedin}}
-        
-          Welcome {{user.username}} 
-          <a href="/logout"> <button type="btn" class="btn btn-red">
-            Logout</button></a>
-        
-
-        {{else}}
-          <p class="display-5 text-black text-center">
-            Let's begin with your Food Adventure.
-
-            <br>
-
+    
+<p class="display-5 text-black text-center">
+     Let's begin with your Food Adventure.
+       <br>
             Ready to start? -> 
-            <a class="signup" href="/register" data-register={{register}}
-            >Create Account</a> to begin your Food Adventure
+            <a class="signup" href="/registration" data-register={{register}}
+            >Create Account</a> to see what users think of your favorite food!
             </p>
 
         {{/if}}
@@ -34,7 +25,7 @@
     </div>
   </div>
 
-   <div class="row likefood">
+   <div class="row likeFood">
         <div class="col">
         <h1 class="strong lead text-black text-center">
             Because who doesn't like food right?</h1>

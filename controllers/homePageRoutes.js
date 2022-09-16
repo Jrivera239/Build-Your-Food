@@ -22,3 +22,5 @@ router.get("/", (req, res) => {
     res.render("originalPage", { post });
   });
 });
+
+module.exports = router;
