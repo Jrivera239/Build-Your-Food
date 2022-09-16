@@ -19,6 +19,6 @@ router.get("/", (req, res) => {
   }).then((postData) => {
     console.log(postData[0]);
     const post = postData.map((post) => post.get({ plain: true }));
-    res.render("")
+    res.render("originalPage", { post });
   });
 });

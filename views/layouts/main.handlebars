@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-        {{#if isloggedin}}
-        
-          Welcome {{username}} 
-          <a href="/logout"> <button type="btn" class="btn btn-red">
-            Logout</button></a>
-          <footer class="blockquote-footer text-black text-center">
+
+ {{#if isloggedin}}
+  Welcome {{user.username}}
+    <a href="/logout"> <button type="btn" class="btn btn-red">
+       Logout</button></a>
+  {{/if}} 
+  
+<body>
+{{{ body }}}
+</body>
+<footer class="blockquote-footer text-black text-center">
             Upon creating account, you will be able to keep your feedback on record.
             </footer>
-
-    <body>
-
-	{{{ body }}}
-
-  <script src="[tbd] ">
-  </script>
-</body>
+  <script src="[tbd] "></script>           
 </html>
 
 
