@@ -23,14 +23,6 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/registration", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("registration");
-});
-
 router.get("/post/:id", (req, res) => {
   Post.findOne({
     where: {
@@ -61,6 +53,14 @@ router.get("/post/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.get("/registration", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("registration");
 });
 
 module.exports = router;
