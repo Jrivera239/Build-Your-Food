@@ -1,16 +1,14 @@
-{{> nav/nav-block}}
 
 <div class="container">
   <div class="row">
   <div class="col-8">
     <div class="card mt-6">
        <div class="card-body">
-        <h4 class="card-title text-center">{{format_date example.createdAt}}</h4>
+        <h4 class="card-title text-center">{{post.title}}</h4>
           <ul id="detail-example-list" 
            class="list-group">
-            <li data-id="{{example.id}}" 
-             class="list-group-item">
-               <alert>What was the name of the food?</alert> 
+            <li class="list-group-item">
+             
                <p contenteditable="true"
                id= "editName">  {{example.name}} </p> 
                <alert>How would you describe the food's taste?</alert>
@@ -39,4 +37,4 @@
 
 <script src="tbd"></script>
 
-{{tbd}}
+
