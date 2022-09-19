@@ -19,7 +19,7 @@ type="button" data-toggle="collapse"
         <a class="nav-link text-white" 
         href="#profile">My Foodie Account</a>
       </li>
-      
+
       <li class="nav-item topnav">
         <a class="nav-link text-white"
         href="#example">Foodie Feedbacks </a>
@@ -30,7 +30,24 @@ type="button" data-toggle="collapse"
         href="#logout">Sign off</a>
       </li>
 
+{{else}}
 
+      <li class="nav-item topnav">
+        <a class="nav-link text-black" 
+        href="/register" 
+        data-register={{register}}>Foodie Sign Up</a>
+      </li>
+
+      <li class="nav-item topnav">
+        <a class="nav-link text-black" 
+        href="#" id="login-modal">Login</a>
+      </li>
+      
+{{/if}}
+    </ul>
+  </div>
+</nav>
+{{> modal/login-block}}
 
 
 
