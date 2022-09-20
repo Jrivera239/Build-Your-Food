@@ -9,16 +9,12 @@
       </header>
 
       <h4 id="msg-err"></h4>
-      <form id= "create-form">
+      <form id= "loginForm">
         <div class="form-row">
           <div class="form-group col-md-8">
 
-            <label class="text-black" 
-            for="username">Username:</label>
-            <input type="text"
-            class="form-control" 
-            id="username" 
-            placeholder="Enter Username">
+            <label class="text-black" for="usernameLogin">Username:</label>
+            <input type="text" class="form-control" id="usernameLogin" placeholder="Enter Username">
           </div>
         </div>
 
@@ -26,10 +22,11 @@
           <div class="form-group col-md-8">
 
             <label class="text-black" 
-            for="Email">Email:</label>
+            for="emailLogin
+            ">Email:</label>
             <input type="email"
             class="form-control" 
-            id="Email" 
+            id="emailLogin" 
             placeholder="Enter Email">
           </div>
         </div>
@@ -38,10 +35,10 @@
           <div class="form-group col-md-8">
 
             <label class="text-black"
-            for="Password">Password:</label>
+            for="passwordLogin">Password:</label>
             <input type="password"
              class="form-control"
-              id="Password" 
+              id="passwordLogin" 
               placeholder="Enter Password Here">
           </div>
         </div>
@@ -54,15 +51,15 @@
          </button>
       </form>
 
-        <form id= "create-form">
+        <form id= "signUpForm">
         <div class="form-row">
           <div class="form-group col-md-8">
             <h4>Create Your Account!</h4>
             <label class="text-black" 
-            for="username">Username:</label>
+            for="usernameSign">Username:</label>
             <input type="text"
             class="form-control" 
-            id="username" 
+            id="usernameSign" 
             placeholder="Enter Username">
           </div>
         </div>
@@ -71,10 +68,10 @@
           <div class="form-group col-md-8">
 
             <label class="text-black" 
-            for="Email">Email:</label>
+            for="emailSign">Email:</label>
             <input type="email"
             class="form-control" 
-            id="Email" 
+            id="emailSign" 
             placeholder="Enter Email">
           </div>
         </div>
@@ -83,24 +80,21 @@
           <div class="form-group col-md-8">
 
             <label class="text-black"
-            for="Password">Password:</label>
+            for="passwordSign">Password:</label>
             <input type="password"
              class="form-control"
-              id="Password" 
+              id="passwordSign" 
               placeholder="Enter Password Here">
           </div>
         </div>
 
 
         <div><h4 id="strong message"></h4></div>
-         <button type="submit"
-          id="add-user" 
-          class="btn btn-red">Submit
-         </button>
+         <button type="submit"  class="btn btn-red">Submit</button>
       </form>
     </div>
   </div>
 </div>
-{{!-- <script src="/javascript/login.js"></script> --}}
-{{!-- script for creating an account  --}}
-<script src></script>
+<script src="/js/login.js"></script>
+
+
