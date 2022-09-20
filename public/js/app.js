@@ -25,13 +25,13 @@ $('#add-user').on('click', function(event) {
   
     const id = $(this).data('id');
   
-    //** record changes **//
+    // record changes************************************************************************************/
     const changeUser = {
       email: $('#inputEmail').val().trim(),
       password: $('#inputPassword').val().trim()
     };
     $('#err-msg').empty('');
-    // **** //
+    //***************************************************************************************************/
     // $('#change-user-modal')
     console.log(changeUser);
   
@@ -41,17 +41,17 @@ $('#add-user').on('click', function(event) {
         url: `/api/user/${id}`,
         data: changeUser
       }).then((result) => {
-        console.log('Updated foodie info:', result);
+        console.log('Updated user:', result);
   
         window.location.href = '/logout';
       });
     } else {
-      console.log('**Insert information here**');
-      $('#update-err-msg').empty('').text('**Insert information here**');
+      console.log('**Fill out entire form**');
+      $('#update-err-msg').empty('').text('**Fill out entire form**');
     }
   });
-    // **** //
-  // DELETE //
+    //*********************************************************************/
+  // DELETE 
   $('#delete-user').on('click', function(event) {
     event.preventDefault();
     $('#err-msg').empty('');
@@ -76,48 +76,47 @@ $('#add-user').on('click', function(event) {
       }).then((result) => {
         if (result) {
           $.ajax(`/api/user/${id}`, {
-            type: 'Deactivate'
+            type: 'DELETE'
           }).then(() => {
-            console.log('Deactivate account', deleteUser);
-
-            // Refreshes page
-            
+            console.log('Deleted user', deleteUser);
+            // Refresh the page
             window.location.href = '/logout';
           });
         } else {
-          $('#err-msg').empty('').text('Please try again');
+          $('#err-msg').empty('').text('Wrong credentials!');
         }
       });
     } else {
-      console.log('Insert information here');
-      $('#err-msg').empty('').text('Insert information here');
+      console.log('fill out entire form');
+      $('#err-msg').empty('').text('fill out entire form');
     }
   });
-  // **** //
+  //End Delete User*******************************************************************/
   $('#register').on('click', function(event) {
     event.preventDefault();
     window.location.href = '/register';
   });
-  // **** //
+  //**********************************************************************************/
   $('#login-modal').on('click', function(event) {
     event.preventDefault();
     $('#user-info').modal('show');
   });
-  /// **** //
+  //**********************************************************************************/
   $('#go-home').on('click', function(event) {
     event.preventDefault();
     window.location.href = '/';
   });
-  // **** //
+  //**********************************************************************************/
   $('#login').on('click', function(event) {
     event.preventDefault();
-  // **** //
+  //**********************************************************************************/
     const user = {
       email: $('#email').val().trim(),
       password: $('#user_password').val().trim()
     };
-  // **** //
+  //**********************************************************************************/
     $.post('/api/login', user, (result) => {
+      // console.log(result);
       if (result.loggedIn) {
         $(document.location).attr('href', '/example');
       } else {
