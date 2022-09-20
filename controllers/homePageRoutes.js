@@ -3,7 +3,6 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
-  console.log(req.session);
   Post.findAll({
     attributes: ["id", "title", "post_text", "created_at"],
     include: [
@@ -57,7 +56,7 @@ router.get("/post/:id", (req, res) => {
 
 router.get("/registration", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("profile");
     return;
   }
   res.render("registration");

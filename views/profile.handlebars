@@ -4,21 +4,24 @@
     </h2>
     {{#if loggedIn}}
      <div class= "welcome">
-      <h3>{{user.username}}</h3>
+      <h3>{{username}}</h3>
+      
      </div>
      {{/if}}
-         <h4 id= "update-err-msg">
-         </h4>
   </header>
-
+{{#each posts as |post|}}
     <div class="form-row">
-      <div class="form-group col-md-8">
-        
+      <div class="form-group col-md-8 post">
+        <h2><a href="/post/{{id}}">{{title}}</h2>
+        <p>{{post_text}}</p>
+        <p>{{comment.comment_text}}</p>
       </div>
-      <div class="form-group col-md-6">
-       
       </div>
-    </div>
+      {{/each}}
+      
+    
 {{!-- script for logging out and editing post --}}
+{{#if loggedIn}}
 <script src></script>
 <script src></script>
+{{/if}}
