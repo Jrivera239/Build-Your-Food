@@ -1,0 +1,56 @@
+<nav class="navbar navbar-black navbar-expand-sm bg-red mb-6"></nav>
+<a class="navbar-brand" 
+href="/dashboard">Rate Your Food</a>
+
+<button class="navbar-toggler toggler-example purple darken-3" 
+type="button" data-toggle="collapse"
+    data-target="#Navbar" 
+    aria-controls="Navbar" 
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <strong class="red-text"></strong></button>
+
+<div id="Navbar"
+     class="collapse navbar-collapse topnav-justify"></div>
+ 
+{{#if isloggedin}}
+   
+      <li class="nav-item topnav">
+        <a class="nav-link text-white" 
+        href="#profile">My Foodie Account</a>
+      </li>
+
+      <li class="nav-item topnav">
+        <a class="nav-link text-white"
+        href="#example">Foodie Feedbacks Log</a>
+      </li>
+
+      <li class="nav-item topnav">
+        <a class="nav-link text-white" 
+        href="#logout">Sign Out</a>
+      </li>
+
+{{else}}
+
+      <li class="nav-item topnav">
+        <a class="nav-link text-black" 
+        href="/register" 
+        data-register={{register}}>Foodie Sign Up</a>
+      </li>
+
+      <li class="nav-item topnav">
+        <a class="nav-link text-black" 
+        href="#" id="login-modal">Login</a>
+      </li>
+      
+{{/if}}
+    </ul>
+  </div>
+</nav>
+{{> modal/login-block}}
+
+
+
+
+
+

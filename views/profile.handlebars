@@ -1,26 +1,104 @@
+{{> nav/nav-block user=true register=false}}
+
+
 <div class= "container">
   <header align= "center" class= "header-wrap">
     <h2 class= "text-black">Foodie Account Information
     </h2>
      <div class= "userId">
+
      </div>
+     {{/if}}
          <h4 id= "update-err-msg">
          </h4>
   </header>
 
-    <div class="form-row">
+    <form class="form-row">
       <div class="form-group col-md-8">
-        <label class="text-black" for="inputPassword">E-mail</label>
+        <label class="text-black" 
+        for="inputPassword">E-mail</label>
         <input type="text" 
         class="form-control" 
         id="inputEmail" 
-        value="{{user.email}}">
+        value="{{userInfo.email}}">
       </div>
-      <div class="form-group col-md-6">
-        <label class="text-black" for="inputPassword">Password</label>
+
+      <div class="form-group col-md-8">
+        <label class="text-black" 
+        for="inputPassword">Password</label>
         <input type="password" 
         class="form-control" 
         id="inputPassword" 
-        value="{{user.password}}">
+        value="{{userInfo.password}}">
       </div>
     </div>
+
+      <div>
+      <button type="submit" id="update-user" 
+      data-id="{{userInfo.id}}" 
+      class="btn btn-red">Update account</button>
+      {{#unless userInfo.isAdmin}}
+      <button type="submit" 
+      id="view-user" 
+      data-id="{{userInfo.id}}" 
+      class="btn btn-red">Refresh</button>
+      </div>
+  </form>
+
+<div class="modal" 
+    id="delete-user-modal" 
+    tabindex="-1" 
+    role="dialog">
+    <div class="modal-dialog" 
+    role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Please enter info to deactivate account</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <strong aria-hidden="true">&times;</strong>
+   </button>
+</div>
+
+ <div class="modal-body">
+  <h3 id="err-msg"></h3>
+    <form>
+      <div class="form-group">
+       <label for="userEmail">E-mail:</label>
+         <input type="text" 
+          class="form-control" 
+          id="userEmail">
+      </div>
+
+      <div class="form-group">
+        <label for="userPassword">Enter password:</label>
+          <input type="password" 
+          class="form-control" 
+          id="userPassword">
+      </div>
+    </form>
+  </div>
+<div class="modal-footer">
+          <button id="confirm-delete" 
+          type="button" 
+          data-id="{{userInfo.id}}" 
+          class="btn btn-red">Deactivating</button>
+          <button type="button" 
+          class="btn btn-black" 
+          data-dismiss="modal">Click to deactivate</button>
+    </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
