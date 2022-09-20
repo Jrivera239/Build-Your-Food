@@ -11,20 +11,20 @@
   </div>
 </article>
 {{/each}}
+{{#if loggedIn}}
 <form class="addComment">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="commentText"></textarea>
   </div>
 
   <div>
     <button type="submit">add comment</button>
   </div>
 </form>
+{{/if}}
 
-{{!-- form for commenting should go here --}}
-<form></form>
 {{!-- script for commenting here --}}
-<script src></script>
+<script src="/js/comment.js"></script>
 
   
 
