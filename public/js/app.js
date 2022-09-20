@@ -79,7 +79,9 @@ $('#add-user').on('click', function(event) {
             type: 'Deactivate'
           }).then(() => {
             console.log('Deactivate account', deleteUser);
+
             // Refreshes page
+            
             window.location.href = '/logout';
           });
         } else {
