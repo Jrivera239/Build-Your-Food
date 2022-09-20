@@ -31,6 +31,10 @@ padding-bottom: 5%;
 width: 100vh;
 }
 
+.topnav {
+list-style: none;
+}
+
 nav {
 align-items:center;
 display:flex;
@@ -39,6 +43,10 @@ justify-content:space-between;
 padding-left:15%;
 padding-right:15%;
 padding-top:20px;
+}
+
+.modal {
+color: rgb(0, 0, 0);
 }
 
 .msg-margin {
@@ -51,9 +59,25 @@ font-size: 1.5rem;
 font-weight: 400;
 }
 
+.spacing {
+margin: 5rem;
+}
+
 hr {
 background-color: white !important;
 }
+
+.signup {
+color: red;
+font-size:x-large;
+font-weight: bold;
+text-decoration:solid;
+}
+  
+.signup:hover {
+text-decoration: solid;
+color: rgb(131, 5, 5);
+  }
 
 .editbuttonspace {
 margin-right: 1.5rem;
@@ -62,18 +86,56 @@ float: right;
 font-weight: 500;
 }
 
-.topnav {
-list-style: none;
+.font-utility {
+font-size: 1.7rem;
+}
+  
+.secondary-font-utility {
+font-size: 1.1rem;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    box-shadow: 0px 10px 14px 0px black; 
+    background-color: white;
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    right: 1;
+    z-index: 1;
 
+}
 
+.dropdown:hover .dropdown-content {
+display: block;
+}
 
+.dropdown:hover .dropbtn {
+background-color: #e00e0e;
 
+}
 
+.dropdown-content a {
+color: rgb(0, 0, 0);
+padding: 10px 14px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: white;
+}
+  
+.msg-margin {
+margin-top: 0.6rem;
+}
 
 #go-home {
-height: 80px;
+height: 85px;
 width: auto;
 }
 
@@ -81,7 +143,9 @@ width: auto;
 color: rgb(217, 46, 12) !important;
 }
 
-
+hr {
+background-color: white !important;
+}
 @media screen and (max-width: 480px) {.font-utility {
 font-size: 1.3rem;
 }
