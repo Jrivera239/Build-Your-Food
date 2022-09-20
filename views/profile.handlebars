@@ -39,28 +39,42 @@
       <button type="submit" 
       id="view-user" 
       data-id="{{userInfo.id}}" 
-      class="btn btn-dark">Refresh</button>
+      class="btn btn-red">Refresh</button>
       </div>
   </form>
 
- <div class="modal-body">
-          <h3 id="err-msg"></h3>
-          <form>
-            <div class="form-group">
-              <label for="userEmail">E-mail:</label>
-              <input type="text" 
-              class="form-control" 
-              id="userEmail">
-            </div>
+<div class="modal" 
+    id="delete-user-modal" 
+    tabindex="-1" 
+    role="dialog">
+    <div class="modal-dialog" 
+    role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Please enter info to deactivate account</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <strong aria-hidden="true">&times;</strong>
+   </button>
+</div>
 
-            <div class="form-group">
-              <label for="userPassword">Enter password:</label>
-              <input type="password" 
-              class="form-control" 
-              id="userPassword">
-            </div>
-          </form>
-        </div>
+ <div class="modal-body">
+  <h3 id="err-msg"></h3>
+    <form>
+      <div class="form-group">
+       <label for="userEmail">E-mail:</label>
+         <input type="text" 
+          class="form-control" 
+          id="userEmail">
+      </div>
+
+      <div class="form-group">
+        <label for="userPassword">Enter password:</label>
+          <input type="password" 
+          class="form-control" 
+          id="userPassword">
+      </div>
+    </form>
+  </div>
 
 
 
