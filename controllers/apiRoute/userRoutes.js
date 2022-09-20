@@ -69,7 +69,7 @@ router.post("/registration", (req, res) => {
     const correctPassword = userData.verifyPassword(req.body.password);
 
     if (!correctPassword) {
-      res.status(400).json({ message: "Wrong Username or Password" });
+      res.status(400).json({ message: "Wrong email or Password" });
       return;
     }
     req.session.save(() => {
