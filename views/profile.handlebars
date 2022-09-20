@@ -2,8 +2,11 @@
   <header align= "center" class= "header-wrap">
     <h2 class= "text-black">Foodie Account Information
     </h2>
-     <div class= "userId">
+    {{#if loggedIn}}
+     <div class= "welcome">
+      <h3>{{username}}</h3>
      </div>
+     {{/if}}
          <h4 id= "update-err-msg">
          </h4>
   </header>
