@@ -9,6 +9,7 @@
     "express-session": "^1.17.3",
     "install": "^0.13.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.6"
+    "sequelize": "^6.21.6",
+    "validator": "^13.7.0"
   }
 }
