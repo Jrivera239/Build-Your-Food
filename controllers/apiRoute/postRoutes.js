@@ -70,6 +70,7 @@ router.put("/:id", (req, res) => {
   Post.update(
     {
       title: req.body.title,
+      post_text: req.body.post_text,
     },
     {
       where: {
@@ -83,6 +84,7 @@ router.put("/:id", (req, res) => {
         return;
       }
       res.json(postData);
+      
     })
     .catch((err) => {
       console.log(err);
