@@ -7,9 +7,14 @@ padding:0;
 
 body {
 background-attachment: fixed;
-background-color: black;
+color: rgb(16, 10, 10);
 background-position: 90%;
 background-size: cover;
+background-image:url (https://res.cloudinary.com/hio22hxcn/image/upload/ar_3:2,c_fill,f_auto,fl_lossy,g_auto,q_auto,w_1600/v1568801019/wq7kivplwe0ccwm3waj8);
+}
+
+.card-body {
+  color:black;
 }
 
 .jumbotron {
@@ -21,16 +26,48 @@ margin: 2.5rem .5rem 0 .5rem;
 padding: 1.5rem;
 }
 
+#user-form{
+padding: 20px;
+border-radius: 15px;
+margin: 20px 0;
+}
+
+.header-wrap{
+padding: 20px;
+border-radius: 15px;
+margin: 20px 0;
+}
+  
+#create-form{
+padding: 20px;
+border-radius: 15px;
+margin: 20px 0;
+}
+  
+.create-user-wrap {
+padding: 20px;
+border-radius: 15px;
+margin: 20px 0;
+}
+
 .container {
-background: rgba(109, 53, 55, 0.6);
+background: rgba(241, 114, 119, 0.6);
 border-radius: 1rem;
 height: 100%;
-margin-top: 20%;
-margin-bottom: 5%;
-padding-bottom: 5%;
+margin-top: 15%;
+margin-bottom: 3%;
+padding-bottom: 3%;
 width: 100vh;
 }
 
+.dropbtn {
+border: 0ch;
+ background-color: #81818181;
+color: rgba(0, 0, 0, 0.806);
+cursor: pointer;
+font-size: 15px;
+ padding: 14px;
+}
 .topnav {
 list-style: none;
 }
@@ -49,6 +86,18 @@ padding-top:20px;
 color: rgb(0, 0, 0);
 }
 
+.list-group-item {
+  line-height: 2.3;
+}
+
+.userId h2{
+text-transform: capitalize;
+}
+
+.header-wrap h1 {
+text-transform: capitalize;
+}
+
 .msg-margin {
 margin-top: 0.7rem;
 margin-bottom: 0.1rem;
@@ -60,7 +109,7 @@ font-weight: 400;
 }
 
 .spacing {
-margin: 5rem;
+margin: 5.5rem;
 }
 
 hr {
@@ -79,10 +128,10 @@ text-decoration: solid;
 color: rgb(131, 5, 5);
   }
 
-.editbuttonspace {
+.editspace {
 margin-right: 1.5rem;
 margin-bottom: 1.1rem;
-float: right;
+float: left;
 font-weight: 500;
 }
 
@@ -107,7 +156,6 @@ font-size: 1.1rem;
     position: absolute;
     right: 1;
     z-index: 1;
-
 }
 
 .dropdown:hover .dropdown-content {
@@ -134,8 +182,16 @@ background-color: white;
 margin-top: 0.6rem;
 }
 
+[data-useremail="true"] {
+  color: black !important;
+}
+
+[data-register="true"] {
+  color: black !important;
+}
+
 #go-home {
-height: 85px;
+height: 70px;
 width: auto;
 }
 
