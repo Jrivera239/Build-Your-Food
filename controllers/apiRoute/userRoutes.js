@@ -41,7 +41,14 @@ router.post("/", (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((userData) => res.json(userData))
+    .then((userData) => {
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.username = userData.username;
+        req.session.loggedIn = true;
+        res.json(userData);
+      });
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -49,18 +56,40 @@ router.post("/", (req, res) => {
 });
 
 //login route will go here
-// router.post("/login", (req, res) => {
-//   User.findOne({
-//     where: {
-//       email: req.body.email,
-//     },
-//   }).then((userData) => {
-//     if (!userData) {
-//       res.status(400).json({ message: "No user with that email address" });
-//       return;
-//     }
-//   });
-// });
+router.post("/registration", (req, res) => {
+  User.findOne({
+    where: {
+      email: req.body.email,
+    },
+  }).then((userData) => {
+    if (!userData) {
+      res.status(400).json({ message: "No user with that email address" });
+      return;
+    }
+    const correctPassword = userData.verifyPassword(req.body.password);
+
+    if (!correctPassword) {
+      res.status(400).json({ message: "Wrong email or Password" });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.username = userData.username;
+      req.session.loggedIn = true;
+      res.json({ user: userData, message: "You are logged in!" });
+    });
+  });
+});
+
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 router.delete("/:id", (req, res) => {
   User.destroy({

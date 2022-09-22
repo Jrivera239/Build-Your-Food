@@ -25,8 +25,9 @@ const sess = {
 app.use(session(sess));
 
 // Express middleware
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 //Allows us to use handlebars
 app.engine("handlebars", hbs.engine);

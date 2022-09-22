@@ -1,8 +1,33 @@
-<article>
-  <a href="/example">Lets give the food the most honest feedback.</a>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="clearfix mb-4" action="POST">
+
+<article class="jumbotron jumbotron-fluid hero container">
+  <div>
+  <h1>{{post.title}}</h1>
+  <p>{{post.post_text}}</p>
+  </div>
+
+{{#each post.comments as |comment|}}
+  <div>
+    {{user.username}} 
+    <p>{{comment_text}}</p>
+  </div>
+
+{{/each}}
+{{#if loggedIn}}
+<form class="addComment">
+  <div>
+    <textarea name="commentText"></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-danger">add comment</button>
+  </div>
+</form>
+</article>
+{{/if}}
+
+{{!-- script for commenting here --}}
+<script src="/js/comment.js"></script>
+
+  
 
  
