@@ -1,4 +1,4 @@
-{{> nav/nav-block}}
+
 
 
 <div id="main-container" 
@@ -16,8 +16,7 @@
 
         {{#if isloggedin}}
         
-          Welcome {{user.firstName}}
-           {{user.lastName}}
+          
           <a href="/logout"> 
           <button type="btn" 
           class="btn btn-red">
@@ -34,11 +33,10 @@
 
             Ready to start? -> 
             <a class="signup" 
-            href="/register" data-register={{register}}
             >Create Account</a> to begin your Food Adveture
             </p>
 
-        {{/if}}
+       
 
         <h5 id="if-login-err"
         class="text-center"></h5>
@@ -65,7 +63,8 @@
         {{/each}}
       </ol>
     </div>
+    
     <script src="/js/logout.js"></script>
      
 
-{{> modal/login-block}}
+
