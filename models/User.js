@@ -2,6 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
+
 //This class, Comment, and Post classes will convey what the data consists of
 class User extends Model {
   //compares password they typed into to password associated with their account.
@@ -41,7 +42,9 @@ User.init(
     //hashes password before creating and updating it
     hooks: {
       async beforeCreate(userData) {
+
         userData.password = await bcrypt.hash(userData.password, 10);
+
         return userData;
       },
 
