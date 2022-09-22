@@ -6,14 +6,16 @@
     }
     
     body {
-    background-attachment: fixed;
-    background-color: white;
-    background-position: 90%;
-    background-size: cover;
+    background-attachment: relative;
+    background-size: 100%;
+    background-image: url(https://res.cloudinary.com/hio22hxcn/image/upload/ar_3:2,c_fill,f_auto,fl_lossy,g_auto,q_auto,w_1600/v1568801019/wq7kivplwe0ccwm3waj8);
     }
+
+    .container
     
     .jumbotron {
     background: rgba(5, 2, 2, 0.265);
+    
     }
     
     .hero {
@@ -22,13 +24,15 @@
     }
     
     .container {
-    background: rgba(109, 53, 55, 0.6);
+    background: rgba(190, 179, 179, 0.705);
     border-radius: 1rem;
     height: 100%;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 5%;
     padding-bottom: 5%;
-    width: 100vh;
+
+    opacity: 1;
+    /* width: 100vh; */
     }
     
     .topnav {
@@ -44,10 +48,26 @@
     padding-right:15%;
     padding-top:20px;
     }
-    
-    .modal {
-    color: rgb(0, 0, 0);
+
+    a {
+        text-decoration: none;
+        color:rgb(75, 15, 15)
     }
+
+    .HEAD {
+        color: rgb(255, 255, 255) ;
+        background-color: rgb(66, 20, 20);
+        border-radius: 12px;
+    }
+
+    .homeText {
+        color: rgb(44, 9, 6);
+    }
+
+    .foodie {
+        text-decoration: underline;
+    }
+
     
     .msg-margin {
     margin-top: 0.7rem;
@@ -68,15 +88,14 @@
     }
     
     .signup {
-    color: red;
-    font-size:x-large;
+    color: rgb(158, 13, 13);
     font-weight: bold;
     text-decoration:solid;
     }
       
     .signup:hover {
     text-decoration: solid;
-    color: rgb(131, 5, 5);
+    color: rgba(243, 0, 0, 0.432);
       }
     
     .editbuttonspace {
@@ -137,10 +156,6 @@
     #go-home {
     height: 85px;
     width: auto;
-    }
-    
-    #create-err-msg, #login-err-msg, #update-err-msg {
-    color: rgb(217, 46, 12) !important;
     }
     
     hr {

@@ -7,8 +7,8 @@
       <p class="display-6 text-black d-none d-sm-block text-center"
       >Welcome to Rate The Food</p>
       <nav>
-          <a href="/profile">My Profile</a>
-          <button id="logout">logout</button>
+          <a href="/profile" class="btn btn-danger">My Profile</a>
+          <button id="logout" class="btn btn-danger">logout</button>
       </nav>
       <hr class="my-4">
       <div class="col">
@@ -38,7 +38,7 @@
         <li>
           <article class="post">
            <h2 ><a href="/post/{{id}}">{{title}}</a></h2>
-           <p>{{post_text}}</p>
+           <p class="homeText">{{post_text}}</p>
           </article>
         </li>
         {{/each}}
