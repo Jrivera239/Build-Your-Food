@@ -67,6 +67,10 @@
     .foodie {
         text-decoration: underline;
     }
+    
+    .center {
+        margin-top: 20px;
+    }
 
     
     .msg-margin {
