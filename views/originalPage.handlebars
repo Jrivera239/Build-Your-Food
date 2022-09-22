@@ -8,9 +8,8 @@
       <p class="display-6 text-black d-none d-sm-block text-center"
       >Welcome to Rate The Food</p>
       <nav>
-        <ol>
-          <li><a href="/profile">My Profile</a></li>
-        </ol>
+          <a href="/profile">My Profile</a>
+          <button id="logout">logout</button>
       </nav>
       <hr class="my-4">
       <div class="col">
@@ -52,7 +51,21 @@
         <h1 class="strong lead text-black text-center">
             Because who doesn't like food right?</h1>
         </div>
-    </div>    
+    </div>
 
+    <div>
+      <ol class="postList">
+        {{#each post }}
+        <li>
+          <article class="post">
+           <h2 ><a href="/post/{{id}}">{{title}}</a></h2>
+           <p>{{post_text}}</p>
+          </article>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    <script src="/js/logout.js"></script>
+     
 
 {{> modal/login-block}}

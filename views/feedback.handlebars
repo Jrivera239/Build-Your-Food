@@ -1,11 +1,30 @@
+
 <article>
   <h1>{{post.title}}</h1>
   <p>{{post.post_text}}</p>
 </article>
-{{!-- form for commenting should go here --}}
-<form></form>
+{{#each post.comments as |comment|}}
+<article class="disComment">
+  <div>
+    {{user.username}} 
+    <p>{{comment_text}}</p>
+  </div>
+</article>
+{{/each}}
+{{#if loggedIn}}
+<form class="addComment">
+  <div>
+    <textarea name="commentText"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
 {{!-- script for commenting here --}}
-<script src></script>
+<script src="/js/comment.js"></script>
 
   
 
