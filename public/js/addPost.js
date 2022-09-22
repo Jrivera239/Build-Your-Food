@@ -25,7 +25,4 @@ async function addPost(event) {
   }
 }
 
-
-
 document.querySelector(".addPost").addEventListener("submit", addPost);
-
