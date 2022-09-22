@@ -42,4 +42,4 @@ Build your food
 https://github.com/Jrivera239/Build-Your-Food
 
 ## Heroku
-https://dashboard.heroku.com/apps/tranquil-dusk-31176
+https://tranquil-dusk-31176.herokuapp.com/
